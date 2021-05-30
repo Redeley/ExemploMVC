@@ -1,0 +1,63 @@
+﻿@{ ViewData["Title"] = "IMC"; }
+
+
+<div class="text-center">
+    <h1 class="display-4">Seja bem Vindo!!</h1>
+
+</div>
+
+<form class="container" id="formulario">
+    <div class="col-md-3">
+        <fieldset class="form-group">
+            <legend>Cálculo IMC</legend>
+
+            <div id="image">
+                <img src="~/images/unnamed.jpg" alt="Imagem IMC" width=850 height=850 style=" vertical-align: middle; border-style: none; left: 450px; position: absolute; height: 700px; width: 850px;">
+            </div>
+
+            <div class=" explicacao">
+                <p>
+                    O IMC é reconhecido como padrão internacional para avaliar o grau de sobrepeso e obesidade.<br>
+                    É calculado dividindo o peso (em kg) pela altura ao quadrado (em metros).<br>
+                <p>
+
+                <p>
+                    IMC = Peso ÷ (Altura × Altura)
+
+                    Exemplo de como calcular o IMC:
+
+                    IMC = 80 kg ÷ (1,80 m × 1,80 m) = 24,69 kg/m2 (Peso ideal)
+                <p>
+
+            </div>
+
+            <label>Sexo</label>
+            <div class="input">
+                <div text="Sexo" placeholder maxlength="200">
+                    <div class="radio" style="padding: 10px;border: outset;">
+
+                        Feminino: <input type="radio" name="feminino" />
+                        <labbel for="feminino" class="btn" style="text-align: center">
+                    </div><br>
+
+                    <div class="radio" style="padding: 10px;border: outset;">
+                        Masculino: <input type="radio" name="masculino" style="text-align: center" />
+                        <labbel for="Masculino" class="btn" style="text-align: center">
+                    </div><br>
+
+                    <label for="peso">Peso:</label>
+                    <input type="text" name="peso" class="form-control" style=" border: outset;" />
+
+                    <label for="altura">Altura: </label>
+                    <input type="text" name="altura" class="form-control" style=" border: outset; " />
+
+                    <label for="imc">IMC: </label>
+                    <input type="text" name="imc" class="form-control" disabled="disabled" />
+                    <br />
+                    <button type="button" class="btn btn-warning" onclick="calcularIMC() " style="height: 40px; width: 240px;">Calcular IMC</button>
+        </fieldset>
+    </div>
+
+    <p>Aprenda um pouco mais sobre <a href="https://www.programasaudefacil.com.br/calculadora-de-imc"> MVC</a>.</p>
+</form>
+
